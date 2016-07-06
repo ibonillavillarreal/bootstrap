@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SiteCatalog.master.cs" Inherits="Acciona.SiteCatalog" %>
+
+
+
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    
+    
+    <div class="page-header" style="margin-top: 5px;">
+        <asp:ContentPlaceHolder ID="cntTitulo" runat="server">
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="cntEncabezado" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div>
+        <asp:ContentPlaceHolder ID="cntCuerpo" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('select').chosen({
+                width: "100%"
+            });
+        });
+        //var jq = jQuery.noConflict();
+
+        
+
+       
+    </script>
+</asp:Content>

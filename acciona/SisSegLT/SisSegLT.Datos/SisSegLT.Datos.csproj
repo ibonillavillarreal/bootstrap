@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B37EF43E-E42D-4689-8B46-7B94D196016E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SisSegLT.Datos</RootNamespace>
+    <AssemblyName>SisSegLT.Datos</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AprobacionInstitucion.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AprobacionInstitucionDAO.cs" />
+    <Compile Include="Auditoria.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Barrios.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CargosMensuales.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CargosMensualesDAO.cs" />
+    <Compile Include="Categoria.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CategoriaDAO.cs" />
+    <Compile Include="Ciudad.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CiudadDAO.cs" />
+    <Compile Include="Clasificacion.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClasificacionDAO.cs" />
+    <Compile Include="Cliente.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClienteCuentaDAO.cs" />
+    <Compile Include="ClienteDAO.cs" />
+    <Compile Include="ClienteEvaluacion.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClienteEvaluacionDAO.cs" />
+    <Compile Include="Contacto.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContactoDAO.cs" />
+    <Compile Include="CuotasDAO.cs" />
+    <Compile Include="DataTablePager.cs" />
+    <Compile Include="DatosClienteImp.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatosClienteImpDAO.cs" />
+    <Compile Include="DatosNegocio.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatosNegocioDAO.cs" />
+    <Compile Include="dbSisSeg.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbSisSeg.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbSisSeg.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbSisSeg.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbSisSeg.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DestinoCredito.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DestinoCreditoDAO.cs" />
+    <Compile Include="DetalleCliente.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleClienteDAO.cs" />
+    <Compile Include="DetalleDesembolsoDAO.cs" />
+    <Compile Include="DetallePagoDAO.cs" />
+    <Compile Include="DetallePrestamosClienteImp.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DetallePrestamosClienteImpDAO.cs" />
+    <Compile Include="DocumentosNegocio.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentosNegocioDAO.cs" />
+    <Compile Include="Domicilio.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DomicilioDAO.cs" />
+    <Compile Include="Empresas.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresasDAO.cs" />
+    <Compile Include="Encriptacion.cs" />
+    <Compile Include="EstadoCuentasDAO.cs" />
+    <Compile Include="EvaluacionCategoria.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EvaluacionCategoriaClasificacion.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Factor.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FactorDAO.cs" />
+    <Compile Include="Feriados.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FeriadosDAO.cs" />
+    <Compile Include="FrecuenciaDAO.cs" />
+    <Compile Include="InformacionCheque.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ItemMenu.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ItemMenuDAO.cs" />
+    <Compile Include="ItemRol.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ItemRolDAO.cs" />
+    <Compile Include="ListaCobroDAO.cs" />
+    <Compile Include="MatrizCalificacion.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MatrizCalificacionDAO.cs" />
+    <Compile Include="Metodologia.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MetodologiaDAO.cs" />
+    <Compile Include="MovimientosDAO.cs" />
+    <Compile Include="NavigationProperties.cs" />
+    <Compile Include="NegocioProveedores.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrigenFondos.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pais.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaisDAO.cs" />
+    <Compile Include="PlasticoDAO.cs" />
+    <Compile Include="Profesion.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProfesionDAO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProveedoresDAO.cs" />
+    <Compile Include="RecibosDAO.cs" />
+    <Compile Include="ReferenciaCrediticia.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReferenciaCrediticiaDAO.cs" />
+    <Compile Include="Referencias.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReferenciasDAO.cs" />
+    <Compile Include="ResumenTransaccion.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ResumenTransaccionDAO.cs" />
+    <Compile Include="Reversion.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Rol.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RolDAO.cs" />
+    <Compile Include="RutaCobro.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RutaCobroPrincipal.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spDatosClienteDAO.cs" />
+    <Compile Include="spPlasticoListadDAO.cs" />
+    <Compile Include="SP_CalculoCuotas_Result.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_ConsultaCodigoVehiculo_Result.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CreditoPorMes_Result.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CuotasPendientes_Result.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_DatosCliente_Result.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_DatosCredito_Result.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_DatosDocumentosCliente_Result.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_EncabezadoEstadoCuentaxCedula_Result.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_EncabezadoEstadoCuenta_Result.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_EstadoCuenta1_Result.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_EstadoCuenta_Result.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_ListadeCobroXColector_Result.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_ListarConcilicacionRecibo_Result.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_ListarRutaCobro_Result.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_PlasticoLista_Result.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_RecuperacionCarteraPorColector_Result.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_RecuperacionPorMes_Result.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sucursal.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SucursalDAO.cs" />
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tClienteCuenta.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tCredito.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tCuotas.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tDetallePago.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tEstadoCuentas.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tFrecuencia.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TipoCuentaDAO.cs" />
+    <Compile Include="TipoTransaccion.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TipoTransaccionDAO.cs" />
+    <Compile Include="tMovimientos.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tPlastico.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tTipoCuenta.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tVehiculos.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioDAO.cs" />
+    <Compile Include="UsuarioRol.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioRolDAO.cs" />
+    <Compile Include="usuarios.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VehiculosDAO.cs" />
+    <Compile Include="vwDatosGeneralesPerfil.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwDatosNegocio.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwDatosVehiculos.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwEvaluacionCliente.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwEvaluacionClienteCategoria.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwEvaluaciones.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwExclusivoInstitucion.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwListaClientesGeneral.cs" />
+    <Compile Include="vwListaPlastico.cs" />
+    <Compile Include="vwPerfilesIngresados.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwPerfilIngresado.cs" />
+    <Compile Include="vwPICCliente.cs" />
+    <Compile Include="vwPICIngresados.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwPICIngresadosDetallados.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwReferencias.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwResumenTransacciones.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_CargosMensuales.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_DatosCredito.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_DatosCredito2.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_DatosCredito3.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_ListaCreditos.cs">
+      <DependentUpon>dbSisSeg.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="dbSisSeg.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>dbSisSeg.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="dbSisSeg.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dbSisSeg.edmx</DependentUpon>
+      <LastGenOutput>dbSisSeg.Context.cs</LastGenOutput>
+    </None>
+    <None Include="dbSisSeg.edmx.diagram">
+      <DependentUpon>dbSisSeg.edmx</DependentUpon>
+    </None>
+    <None Include="dbSisSeg.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dbSisSeg.edmx</DependentUpon>
+      <LastGenOutput>dbSisSeg.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dbSisSeg.edmx.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

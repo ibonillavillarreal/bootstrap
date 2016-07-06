@@ -1,0 +1,56 @@
+﻿.gridPrincipal {   
+    width: 100%;   
+    background-color: #fff;   
+    margin: 5px 0 10px 0;   
+    border: solid 1px #525252;   
+    border-collapse:collapse;   
+}  
+.gridPrincipal td {   
+    padding: 2px;   
+    border: solid 1px #c1c1c1;   
+    color: #717171;   
+}  
+.gridPrincipal th {   
+    padding: 4px 2px;   
+    color: #fff;   
+    background: #424242 url(img/grd_head.png) repeat-x top;   
+    border-left: solid 1px #525252;   
+    font-size: 0.9em;   
+}  
+.gridPrincipal .filaAlternativa { background-color: #dcdcdc; }
+/*.gridPrincipal .paginacion { background: #424242 url(img/grd_pgr.png) repeat-x top; }  
+.gridPrincipal .paginacion table { margin: 5px 0; }  
+.gridPrincipal .paginacion td {   
+    border-width: 0;   
+    padding: 0 6px;   
+    border-left: solid 1px #666;   
+    font-weight: bold;   
+    color: #fff;   
+    line-height: 12px;   
+ }     
+.gridPrincipal .paginacion a { color: #666; text-decoration: none; }  
+.gridPrincipal .paginacion a:hover { color: #000; text-decoration: none; }*/  
+
+.acciones {
+    line-height: 16px;
+}
+.boton {
+    padding: 6px;
+    background: url(img/bg_01.png) no-repeat;
+}
+.cerrar {
+    float: right;
+}
+.ordenPanel {
+    width: 100%;
+}
+.ordenPanel .etiqueta {
+    width: 15%;
+}
+.ordenPanel .control {
+    width: 45%;
+}
+.filaSeleccionada {
+    background-color: #add8e6;
+    color: midnightblue;
+}

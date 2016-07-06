@@ -1,0 +1,2 @@
+Usuario: 	dbUser
+Pass:		Adm1$tr4d0r

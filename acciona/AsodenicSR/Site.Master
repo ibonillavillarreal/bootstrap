@@ -1,0 +1,127 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Acciona.SiteMaster" %>
+<!DOCTYPE html>
+
+<html lang="es">
+<head runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acciona Finance</title>
+
+    <script type="text/javascript">
+    
+        //El nombre del controlador que mantiene la sesión
+        var CONTROLADOR = "Handler2.ashx";
+
+        //Ejecuta el script en segundo plano evitando así que caduque la sesión de esta página
+        function MantenSesion() {
+            var head = document.getElementsByTagName('head').item(0);
+            script = document.createElement('script');
+            script.src = CONTROLADOR;
+            script.setAttribute('type', 'text/javascript');
+            script.defer = true;
+            head.appendChild(script);
+        }
+
+        //Temporizador para matener la sesión activa
+        setInterval("MantenSesion()", 60000);
+        
+    
+    </script>
+
+    <asp:PlaceHolder runat="server">
+        <%: Styles.Render("~/Content/css") %>
+        <%: Styles.Render("~/Content/bootstrap.min.css") %>
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <%--<webopt:BundleReference runat="server" Path="~/Content/css" />--%>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="App_Themes/Default/Estilos.css" rel="stylesheet" />
+
+    
+</head>
+<body>
+    <form runat="server">
+        <ajaxToolkit:ToolkitScriptManager runat="server">
+            <Scripts>
+                <%--Para obtener más información sobre cómo agrupar scripts en ScriptManager, consulte http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Scripts de Framework--%>
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <asp:ScriptReference Path="~/Scripts/DataTables-1.10.4/jquery.dataTables.js" />
+                <asp:ScriptReference Path="~/Scripts/DataTables-1.10.4/dataTables.bootstrap.js" />
+                <asp:ScriptReference Path="~/Scripts/jquery.validate.min.js" />
+                <asp:ScriptReference Path="~/Scripts/jquery.validation.net.webforms.js" />
+                <asp:ScriptReference Path="~/Scripts/jquery-validate.bootstrap-tooltip.js" />
+                <asp:ScriptReference Path="~/Scripts/localization/messages_es.js" />
+                <asp:ScriptReference Path="~/Scripts/chosen.jquery.min.js" />
+                <asp:ScriptReference Path="~/Scripts/jquery.maskMoney.js" />
+                <asp:ScriptReference Path="~/Scripts/jquery-ui.js" />
+
+               
+                
+
+                <%--Scripts del sitio--%>
+            </Scripts>
+        </ajaxToolkit:ToolkitScriptManager>
+       
+        <nav class="navbar navbar-fixed-top navbar-custom" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <%--<img src="~/Content/img/acciona_logo.png" height="40" />--%>
+                        <img src="<%=ResolveClientUrl("Content/img/acciona_logo.png")%>" height="40" />
+
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <asp:Literal ID="litMenu" runat="server" Text=""></asp:Literal>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <asp:Literal ID="litUsuarioSucursal" Text="Sucursal" runat="server" />
+                                <asp:Literal ID="litUsuario" runat="server">Bienvenid@</asp:Literal><b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <asp:LinkButton ID="lbSalir" Text="Cerrar sesión" runat="server" OnClick="lbSalir_Click" />
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+        </div>
+    </form>
+    <%--<footer class="well well-sm navbar-fixed-bottom" style="margin-bottom: 0px;">
+        <div>
+            <p>&copy; <%: DateTime.Now.Year %> - Acciona</p>
+        </div>
+    </footer>--%>
+</body>
+</html>

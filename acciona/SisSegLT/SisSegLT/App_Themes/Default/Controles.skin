@@ -1,0 +1,35 @@
+<%--
+Plantilla de máscara predeterminada. Las siguientes máscaras se proporcionan sólo como ejemplos.
+
+1. Máscara de control con nombre. SkinId debería definirse de forma única porque
+no se permite que haya varios SkinId por tipo de control en el mismo tema.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White">
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Máscara predeterminada. Skinid no está definido Sólo se permite
+   una máscara de control por tipo de control en el mismo tema.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+<asp:GridView runat="server" SkinId="sGridPrincipal" BackColor="White"
+    GridLines="None"
+    CssClass="gridPrincipal"
+    PagerStyle-CssClass="paginacion"
+    AlternatingRowStyle-CssClass="filaAlternativa"
+    SelectedRowStyle-CssClass="filaSeleccionada"
+>
+</asp:GridView>
+<asp:ImageButton runat="server" SkinID="imbAgregar" ImageUrl="img/add.png" AlternateText="Agregar" ToolTip="Agregar" />
+<asp:ImageButton runat="server" SkinID="imbEliminar" ImageUrl="img/remover.png" AlternateText="Eliminar" ToolTip="Eliminar" />
+<asp:ImageButton runat="server" SkinID="imbEditar" ImageUrl="img/edit.png" AlternateText="Editar" ToolTip="Editar" />
+<asp:ImageButton runat="server" SkinID="imbCancelar" ImageUrl="img/undo.png" AlternateText="Cancelar" ToolTip="Cancelar" />
+<asp:ImageButton runat="server" SkinID="imbGuardar" ImageUrl="img/save.png" AlternateText="Guardar" ToolTip="Guardar" />
+<asp:ImageButton runat="server" SkinID="imbActualizar" ImageUrl="img/refresh.png" AlternateText="Actualizar" ToolTip="Actualizar" />
+<asp:ImageButton runat="server" SkinID="imbSeleccionar" ImageUrl="img/select.png" AlternateText="Seleccionar" ToolTip="Seleccionar" />
+<asp:ImageButton runat="server" SkinID="imbCiudad" ImageUrl="img/pin.png" AlternateText="Ciudades" ToolTip="Ciudades" />
+<asp:ImageButton runat="server" SkinID="imbLista" ImageUrl="img/list.png" AlternateText="Dependencias" ToolTip="Dependencias" />
+<asp:ImageButton runat="server" SkinID="imbCerrar" ImageUrl="img/close.png" AlternateText="Cancelar" ToolTip="Cancelar" />
+<asp:ImageButton runat="server" SkinID="imbItems" ImageUrl="img/list.png" AlternateText="Items" ToolTip="Items" />
+<asp:ImageButton runat="server" SkinID="imbRoles" ImageUrl="img/users.png" AlternateText="Roles" ToolTip="Roles" />

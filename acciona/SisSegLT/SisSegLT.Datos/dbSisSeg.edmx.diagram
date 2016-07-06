@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="01d752a7467144d999d6edafd0651b9e" Name="dgmSeguridad">
+        <EntityTypeShape EntityType="SSDB.Ciudad" Width="1.5" PointX="7.5" PointY="0.875" />
+        <EntityTypeShape EntityType="SSDB.ItemMenu" Width="1.5" PointX="5" PointY="3.5" />
+        <EntityTypeShape EntityType="SSDB.ItemRol" Width="1.5" PointX="0.625" PointY="4.875" />
+        <EntityTypeShape EntityType="SSDB.Pais" Width="1.5" PointX="7.5" PointY="3.875" />
+        <EntityTypeShape EntityType="SSDB.Sucursal" Width="1.5" PointX="2.375" PointY="0.875" />
+        <AssociationConnector Association="SSDB.FK_Ciudad_Pais" />
+        <AssociationConnector Association="SSDB.FK_Sucursal_Ciudad" />
+        <AssociationConnector Association="SSDB.FK_ItemMenu_ItemMenu" />
+        <AssociationConnector Association="SSDB.FK_ItemRol_ItemMenu" />
+        <EntityTypeShape EntityType="SSDB.DatosClienteImp" Width="1.5" PointX="4.625" PointY="7.25" />
+        <EntityTypeShape EntityType="SSDB.DetallePrestamosClienteImp" Width="1.5" PointX="7.375" PointY="6.75" />
+        <EntityTypeShape EntityType="SSDB.Profesion" Width="1.5" PointX="10.375" PointY="4.75" />
+        <EntityTypeShape EntityType="SSDB.Rol" Width="1.5" PointX="7.25" PointY="10.125" />
+        <EntityTypeShape EntityType="SSDB.UsuarioRol" Width="1.5" PointX="5.25" PointY="13.875" />
+        <AssociationConnector Association="SSDB.FK_UsuarioRol_Rol" ManuallyRouted="true" >
+          <ConnectorPoint PointX="8" PointY="12.105286458333332" />
+          <ConnectorPoint PointX="8" PointY="15.345896809895834" />
+          <ConnectorPoint PointX="6.75" PointY="15.345896809895834" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="SSDB.Usuario" Width="1.5" PointX="1.75" PointY="7.25" />
+        <AssociationConnector Association="SSDB.FK_Usuario_Sucursal" />
+        <AssociationConnector Association="SSDB.FK_UsuarioRol_Usuario" />
+        <EntityTypeShape EntityType="SSDB.vwDatosVehiculos" Width="1.5" PointX="9.375" PointY="7.75" />
+        <EntityTypeShape EntityType="SSDB.vw_CargosMensuales" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SSDB.vw_ListaCreditos" Width="1.5" PointX="0.75" PointY="11.75" />
+        <EntityTypeShape EntityType="SSDB.Barrios" Width="1.5" PointX="11.375" PointY="7.75" />
+        <EntityTypeShape EntityType="SSDB.sysdiagrams" Width="1.5" PointX="4.375" PointY="0.75" />
+        <EntityTypeShape EntityType="SSDB.usuarios" Width="1.5" PointX="9.375" PointY="11.75" />
+        </Diagram>
+      <Diagram DiagramId="e312c245a7f6423fb0e4d88352b5d542" Name="dgmCatalogo" >
+        <EntityTypeShape EntityType="SSDB.Auditoria" Width="1.5" PointX="0.5" PointY="0.5" />
+        <EntityTypeShape EntityType="SSDB.Clasificacion" Width="1.5" PointX="2.625" PointY="5.75" />
+        <EntityTypeShape EntityType="SSDB.Factor" Width="1.5" PointX="2.625" PointY="0.625" />
+        <EntityTypeShape EntityType="SSDB.MatrizCalificacion" Width="1.5" PointX="4.875" PointY="0.625" />
+        <EntityTypeShape EntityType="SSDB.Categoria" Width="1.5" PointX="2.75" PointY="2.875" />
+        <AssociationConnector Association="SSDB.FK_Categoria_Factor" />
+        <AssociationConnector Association="SSDB.FK_Clasificacion_Categoria" />
+        <EntityTypeShape EntityType="SSDB.Metodologia" Width="1.5" PointX="5" PointY="3.625" />
+      </Diagram>
+      <Diagram DiagramId="a498a966e4c04c4c8cc952acf92fbdff" Name="dgmCliente" ZoomLevel="56" >
+        <EntityTypeShape EntityType="SSDB.AprobacionInstitucion" Width="1.5" PointX="34.875" PointY="13" />
+        <EntityTypeShape EntityType="SSDB.Contacto" Width="1.5" PointX="22.875" PointY="17.25" />
+        <EntityTypeShape EntityType="SSDB.DatosNegocio" Width="1.5" PointX="22.875" PointY="31.625" />
+        <EntityTypeShape EntityType="SSDB.DocumentosNegocio" Width="1.5" PointX="25.125" PointY="32.125" />
+        <EntityTypeShape EntityType="SSDB.Domicilio" Width="1.5" PointX="22.875" PointY="13" />
+        <AssociationConnector Association="SSDB.FK_DocumentosNegocio_DatosNegocio" />
+        <EntityTypeShape EntityType="SSDB.EvaluacionCategoria" Width="1.5" PointX="25.125" PointY="21.25" />
+        <EntityTypeShape EntityType="SSDB.EvaluacionCategoriaClasificacion" Width="1.5" PointX="27.375" PointY="21.375" />
+        <AssociationConnector Association="SSDB.FK_EvaluacionCategoriaClasificacion_EvaluacionCategoria" />
+        <EntityTypeShape EntityType="SSDB.NegocioProveedores" Width="1.5" PointX="26.75" PointY="36.25" />
+        <AssociationConnector Association="SSDB.FK_NegocioProveedores_DatosNegocio" />
+        <EntityTypeShape EntityType="SSDB.ReferenciaCrediticia" Width="1.5" PointX="22.875" PointY="36.625" />
+        <EntityTypeShape EntityType="SSDB.ClienteEvaluacion" Width="1.5" PointX="22.875" PointY="21.5" />
+        <AssociationConnector Association="SSDB.FK_IdClienteEvaluacion" />
+        <EntityTypeShape EntityType="SSDB.ResumenTransaccion" Width="1.5" PointX="22.875" PointY="0.75" />
+        <EntityTypeShape EntityType="SSDB.Cliente" Width="1.5" PointX="20.625" PointY="19.75" />
+        <AssociationConnector Association="SSDB.FK_AprobacionInstitucion_Cliente" />
+        <AssociationConnector Association="SSDB.FK_ClienteEvaluacion_Cliente" />
+        <AssociationConnector Association="SSDB.FK_Contacto_Cliente" />
+        <AssociationConnector Association="SSDB.FK_DatosNegocio_Cliente" />
+        <AssociationConnector Association="SSDB.FK_Domicilio_Cliente" />
+        <AssociationConnector Association="SSDB.FK_IdCliente" />
+        <AssociationConnector Association="SSDB.FK_ReferenciaCrediticia_Cliente" />
+        <EntityTypeShape EntityType="SSDB.vwReferencias" Width="1.5" PointX="5.375" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="SSDB.vwExclusivoInstitucion" Width="1.5" PointX="3.375" PointY="5.75" />
+        <EntityTypeShape EntityType="SSDB.vwEvaluacionClienteCategoria" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SSDB.vwEvaluacionCliente" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="SSDB.vwPICIngresados" Width="1.5" PointX="7.375" PointY="3.75" />
+        <EntityTypeShape EntityType="SSDB.vwPerfilesIngresados" Width="1.5" PointX="7.375" PointY="6.75" />
+        <EntityTypeShape EntityType="SSDB.vwDatosNegocio" Width="1.5" PointX="5.5" PointY="8" />
+        <EntityTypeShape EntityType="SSDB.vwResumenTransacciones" Width="1.5" PointX="9.375" PointY="3.75" />
+        <EntityTypeShape EntityType="SSDB.vwDatosGeneralesPerfil" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SSDB.tClienteCuenta" Width="1.5" PointX="25.875" PointY="16.25" />
+        <AssociationConnector Association="SSDB.FK_tClienteCuenta_IdCliente" />
+        <EntityTypeShape EntityType="SSDB.tEstadoCuentas" Width="1.5" PointX="23.625" PointY="9.125" />
+        <AssociationConnector Association="SSDB.FK_tClienteCuenta_tEstadoCuentas" />
+        <EntityTypeShape EntityType="SSDB.tPlastico" Width="1.5" PointX="28.125" PointY="16.875" />
+        <AssociationConnector Association="SSDB.FK_tPlastico_tClienteCuenta" />
+        <EntityTypeShape EntityType="SSDB.tTipoCuenta" Width="1.5" PointX="14.875" PointY="10.875" />
+        <AssociationConnector Association="SSDB.FK_tClienteCuenta_tTipoCuenta" />
+        <EntityTypeShape EntityType="SSDB.Feriados" Width="1.5" PointX="0.75" PointY="11.75" />
+        <EntityTypeShape EntityType="SSDB.DestinoCredito" Width="1.5" PointX="20.625" PointY="33.125" />
+        <EntityTypeShape EntityType="SSDB.DetalleCliente" Width="1.5" PointX="22.875" PointY="46.25" />
+        <EntityTypeShape EntityType="SSDB.Empresas" Width="1.5" PointX="23.625" PointY="27.375" />
+        <EntityTypeShape EntityType="SSDB.Referencias" Width="1.5" PointX="22.875" PointY="41.375" />
+        <EntityTypeShape EntityType="SSDB.Reversion" Width="1.5" PointX="11.375" PointY="0.75" />
+        <EntityTypeShape EntityType="SSDB.RutaCobro" Width="1.5" PointX="3.375" PointY="11.75" />
+        <AssociationConnector Association="SSDB.FK_DatosNegocio_DestinoCredito" />
+        <AssociationConnector Association="SSDB.FK_DetalleCliente_Cliente" />
+        <AssociationConnector Association="SSDB.FK_Referencias_Cliente" />
+        <AssociationConnector Association="SSDB.FK_tClienteCuenta_Empresas" />
+        <EntityTypeShape EntityType="SSDB.TipoTransaccion" Width="1.5" PointX="28.125" PointY="10" />
+        <AssociationConnector Association="SSDB.FK_TipoTransaccion_TipoTransaccion" />
+        <EntityTypeShape EntityType="SSDB.InformacionCheque" Width="1.5" PointX="9.375" PointY="6.75" />
+        <EntityTypeShape EntityType="SSDB.vw_DatosCredito3" Width="1.5" PointX="11.375" PointY="4.75" />
+        <EntityTypeShape EntityType="SSDB.vw_DatosCredito" Width="1.5" PointX="8.375" PointY="10.75" />
+        <EntityTypeShape EntityType="SSDB.vw_DatosCredito2" Width="1.5" PointX="10.375" PointY="10.75" />
+        <EntityTypeShape EntityType="SSDB.tMovimientos" Width="1.5" PointX="33.375" PointY="2.625" />
+        <EntityTypeShape EntityType="SSDB.tVehiculos" Width="1.5" PointX="31.125" PointY="4.375" />
+        <AssociationConnector Association="SSDB.FK_tMovimientos_InformacionCheque" />
+        <AssociationConnector Association="SSDB.FK_tMovimientos_TipoTransaccion" />
+        <AssociationConnector Association="SSDB.FK_tMovimientos_tMovimientos" />
+        <AssociationConnector Association="SSDB.FK_tMovimientos_tPlastico" />
+        <AssociationConnector Association="SSDB.FK_tMovimientos_tVehiculos" />
+        <EntityTypeShape EntityType="SSDB.tCredito" Width="1.5" PointX="30.375" PointY="9.375" />
+        <AssociationConnector Association="SSDB.FK_tCredito_TipoTransaccion" />
+        <EntityTypeShape EntityType="SSDB.tDetallePago" Width="1.5" PointX="39.875" PointY="14.625" />
+        <AssociationConnector Association="SSDB.FK_tDetallePago_tCredito" />
+        <EntityTypeShape EntityType="SSDB.CargosMensuales" Width="1.5" PointX="35.625" PointY="5.5" />
+        <AssociationConnector Association="SSDB.FK_CargosMensuales_tMovimientos" />
+        <EntityTypeShape EntityType="SSDB.tCuotas" Width="1.5" PointX="35.625" PointY="0.75" />
+        <AssociationConnector Association="SSDB.FK_tCuotas_tMovimientos" />
+        <AssociationConnector Association="SSDB.FK_tDetalleMovimiento_tCuotas" />
+        <EntityTypeShape EntityType="SSDB.vw_CargosMensuales" Width="1.5" PointX="3.375" PointY="2.75" />
+        <EntityTypeShape EntityType="SSDB.vw_ListaCreditos" Width="1.5" PointX="5.375" PointY="11.75" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

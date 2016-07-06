@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <RECORD>
+    <FIELD ID='0' xsi:type='CharTerm' TERMINATOR=',' MAX_LENGTH='50' COLLATION='Modern_Spanish_CI_AS' />
+    <FIELD ID='1' xsi:type='CharTerm' TERMINATOR=',' MAX_LENGTH='50' COLLATION='Modern_Spanish_CI_AS' />
+    <FIELD ID='2' xsi:type='CharTerm' TERMINATOR=',' MAX_LENGTH='50' COLLATION='Modern_Spanish_CI_AS' />
+    <FIELD ID='3' xsi:type='CharTerm' TERMINATOR=',' MAX_LENGTH='100' COLLATION='Modern_Spanish_CI_AS' />
+    <FIELD ID='4' xsi:type='CharTerm' TERMINATOR=',' MAX_LENGTH='50' COLLATION='Modern_Spanish_CI_AS' />
+    <FIELD ID='5' xsi:type='CharTerm' TERMINATOR=',' MAX_LENGTH='20' />
+    <FIELD ID='6' xsi:type='CharTerm' TERMINATOR=',' MAX_LENGTH='20' />
+    <FIELD ID='7' xsi:type='CharTerm' TERMINATOR='\n' MAX_LENGTH='10' />
+  </RECORD>
+  <ROW>
+    <COLUMN SOURCE='0' NAME='IdDetalleClienteImp' xsi:type='SQLNVARCHAR'/>
+    <COLUMN SOURCE='1' NAME='NoCedula' xsi:type='SQLNVARCHAR'/>
+    <COLUMN SOURCE='2' NAME='CodigoExpediente' xsi:type='SQLNVARCHAR'/>
+    <COLUMN SOURCE='3' NAME='NombreExpediente' xsi:type='SQLNVARCHAR'/>
+    <COLUMN SOURCE='4' NAME='NoPrestamo' xsi:type='SQLNVARCHAR'/>
+    <COLUMN SOURCE='5' NAME='FechaAprobacion' xsi:type='SQLNVARCHAR'/>
+    <COLUMN SOURCE='6' NAME='FechaCancelacion' xsi:type='SQLNVARCHAR'/>
+    <COLUMN SOURCE='7' NAME='MontoAprobado' xsi:type='SQLNUMERIC'/>
+  </ROW>
+</BCPFORMAT>

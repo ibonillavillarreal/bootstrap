@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7AAF0B1E-D66E-4BFB-BAF1-AB0CFFCA0C2A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AccionaSR.Negocio</RootNamespace>
+    <AssemblyName>AccionaSR.Negocio</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AprobacionInsitucionBLL.cs" />
+    <Compile Include="CargosMensualesBLL.cs" />
+    <Compile Include="CategoriaBLL.cs" />
+    <Compile Include="ClasificacionBLL.cs" />
+    <Compile Include="ClienteBLL.cs" />
+    <Compile Include="ClienteCuentaBLL.cs" />
+    <Compile Include="ClienteEvaluacionBLL.cs" />
+    <Compile Include="ContactoBLL.cs" />
+    <Compile Include="CuotaBLL.cs" />
+    <Compile Include="DatosClienteImpBLL.cs" />
+    <Compile Include="DatosNegocioBLL.cs" />
+    <Compile Include="DestinoCreditoBLL.cs" />
+    <Compile Include="DetalleClienteBLL.cs" />
+    <Compile Include="DetalleDesembolsoBLL.cs" />
+    <Compile Include="DetallePagoBLL.cs" />
+    <Compile Include="DetallePrestamosClienteImpBLL.cs" />
+    <Compile Include="DocumentosNegocioBLL.cs" />
+    <Compile Include="DomicilioBLL.cs" />
+    <Compile Include="EmpresaBLL.cs" />
+    <Compile Include="EstadoCuentasBLL.cs" />
+    <Compile Include="FactorBLL.cs" />
+    <Compile Include="FeriadoBLL.cs" />
+    <Compile Include="FrecuenciaBLL.cs" />
+    <Compile Include="MatrizCalificacionBLL.cs" />
+    <Compile Include="MetodologiaBLL.cs" />
+    <Compile Include="MovimientoBLL.cs" />
+    <Compile Include="PlasticoBLL.cs" />
+    <Compile Include="ProfesionBLL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProveedoresBLL.cs" />
+    <Compile Include="RecibosBLL.cs" />
+    <Compile Include="ReferenciaCrediticiaBLL.cs" />
+    <Compile Include="ReferenciasBLL.cs" />
+    <Compile Include="ResumenTransaccionBLL.cs" />
+    <Compile Include="spDatosClienteBLL.cs" />
+    <Compile Include="spPlasticoListaBLL.cs" />
+    <Compile Include="TipoCuentaBLL.cs" />
+    <Compile Include="TipoTransaccionBLL.cs" />
+    <Compile Include="VehiculoBLL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SisSegLT\SisSegLT.Datos\SisSegLT.Datos.csproj">
+      <Project>{b37ef43e-e42d-4689-8b46-7b94d196016e}</Project>
+      <Name>SisSegLT.Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SisSegLT\SisSegLT.Negocio\SisSegLT.Negocio.csproj">
+      <Project>{1761e9a7-0d10-44ad-ad0f-3c450ed82ab8}</Project>
+      <Name>SisSegLT.Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
